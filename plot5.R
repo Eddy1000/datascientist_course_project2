@@ -22,7 +22,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 be <- NEI[(NEI$fips=="24510") & (NEI$type=="ON-ROAD"),]
 bea <- aggregate(Emissions ~ year, data=be, FUN=sum)
 
-# plot
+# make the plot
 library(ggplot2)
 png("plot5.png")
 ggplot(bea, aes(x=factor(year), y=Emissions)) +
